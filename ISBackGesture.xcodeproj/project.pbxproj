@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7FA133A516D7309E008204B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA133A416D7309E008204B7 /* Foundation.framework */; };
+		7FA133AA16D7309E008204B7 /* ISBackGesture.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FA133A916D7309E008204B7 /* ISBackGesture.h */; };
+		7FB665FC16D7316100EF6380 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA133B716D730A6008204B7 /* UIKit.framework */; };
+		7FB665FD16D7316100EF6380 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA133A416D7309E008204B7 /* Foundation.framework */; };
+		7FB665FE16D7316100EF6380 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA133BA16D730A6008204B7 /* CoreGraphics.framework */; };
+		7FB6660416D7316100EF6380 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7FB6660216D7316100EF6380 /* InfoPlist.strings */; };
+		7FB6660616D7316100EF6380 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6660516D7316100EF6380 /* main.m */; };
+		7FB6660A16D7316100EF6380 /* ISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6660916D7316100EF6380 /* ISAppDelegate.m */; };
+		7FB6660C16D7316100EF6380 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FB6660B16D7316100EF6380 /* Default.png */; };
+		7FB6660E16D7316100EF6380 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FB6660D16D7316100EF6380 /* Default@2x.png */; };
+		7FB6661016D7316100EF6380 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FB6660F16D7316100EF6380 /* Default-568h@2x.png */; };
+		7FB6661716D7317100EF6380 /* libISBackGesture.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA133A116D7309E008204B7 /* libISBackGesture.a */; };
+		7FB6661A16D731C200EF6380 /* ISDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6661916D731C200EF6380 /* ISDemoViewController.m */; };
+		7FB6662016D731D500EF6380 /* UIViewController+BackGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6661E16D731D500EF6380 /* UIViewController+BackGesture.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7FB6661416D7316600EF6380 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7FA1339916D7309E008204B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7FA133A016D7309E008204B7;
+			remoteInfo = ISBackGesture;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7FA1339F16D7309E008204B7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				7FA133AA16D7309E008204B7 /* ISBackGesture.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7FA133A116D7309E008204B7 /* libISBackGesture.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libISBackGesture.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FA133A416D7309E008204B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7FA133A916D7309E008204B7 /* ISBackGesture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISBackGesture.h; sourceTree = "<group>"; };
+		7FA133B716D730A6008204B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7FA133BA16D730A6008204B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7FB665FB16D7316100EF6380 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FB6660116D7316100EF6380 /* DemoApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DemoApp-Info.plist"; sourceTree = "<group>"; };
+		7FB6660316D7316100EF6380 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7FB6660516D7316100EF6380 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7FB6660716D7316100EF6380 /* DemoApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DemoApp-Prefix.pch"; sourceTree = "<group>"; };
+		7FB6660816D7316100EF6380 /* ISAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISAppDelegate.h; sourceTree = "<group>"; };
+		7FB6660916D7316100EF6380 /* ISAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISAppDelegate.m; sourceTree = "<group>"; };
+		7FB6660B16D7316100EF6380 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7FB6660D16D7316100EF6380 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7FB6660F16D7316100EF6380 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7FB6661816D731C200EF6380 /* ISDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISDemoViewController.h; sourceTree = "<group>"; };
+		7FB6661916D731C200EF6380 /* ISDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISDemoViewController.m; sourceTree = "<group>"; };
+		7FB6661D16D731D500EF6380 /* UIViewController+BackGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackGesture.h"; sourceTree = "<group>"; };
+		7FB6661E16D731D500EF6380 /* UIViewController+BackGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackGesture.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7FA1339E16D7309E008204B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FA133A516D7309E008204B7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FB665F816D7316100EF6380 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FB6661716D7317100EF6380 /* libISBackGesture.a in Frameworks */,
+				7FB665FC16D7316100EF6380 /* UIKit.framework in Frameworks */,
+				7FB665FD16D7316100EF6380 /* Foundation.framework in Frameworks */,
+				7FB665FE16D7316100EF6380 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7FA1339816D7309E008204B7 = {
+			isa = PBXGroup;
+			children = (
+				7FA133A616D7309E008204B7 /* ISBackGesture */,
+				7FB665FF16D7316100EF6380 /* DemoApp */,
+				7FA133A316D7309E008204B7 /* Frameworks */,
+				7FA133A216D7309E008204B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7FA133A216D7309E008204B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7FA133A116D7309E008204B7 /* libISBackGesture.a */,
+				7FB665FB16D7316100EF6380 /* DemoApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7FA133A316D7309E008204B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FA133A416D7309E008204B7 /* Foundation.framework */,
+				7FA133B716D730A6008204B7 /* UIKit.framework */,
+				7FA133BA16D730A6008204B7 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7FA133A616D7309E008204B7 /* ISBackGesture */ = {
+			isa = PBXGroup;
+			children = (
+				7FA133A916D7309E008204B7 /* ISBackGesture.h */,
+				7FB6661D16D731D500EF6380 /* UIViewController+BackGesture.h */,
+				7FB6661E16D731D500EF6380 /* UIViewController+BackGesture.m */,
+			);
+			path = ISBackGesture;
+			sourceTree = "<group>";
+		};
+		7FB665FF16D7316100EF6380 /* DemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				7FB6660816D7316100EF6380 /* ISAppDelegate.h */,
+				7FB6660916D7316100EF6380 /* ISAppDelegate.m */,
+				7FB6661816D731C200EF6380 /* ISDemoViewController.h */,
+				7FB6661916D731C200EF6380 /* ISDemoViewController.m */,
+				7FB6660016D7316100EF6380 /* Supporting Files */,
+			);
+			path = DemoApp;
+			sourceTree = "<group>";
+		};
+		7FB6660016D7316100EF6380 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7FB6660116D7316100EF6380 /* DemoApp-Info.plist */,
+				7FB6660216D7316100EF6380 /* InfoPlist.strings */,
+				7FB6660516D7316100EF6380 /* main.m */,
+				7FB6660716D7316100EF6380 /* DemoApp-Prefix.pch */,
+				7FB6660B16D7316100EF6380 /* Default.png */,
+				7FB6660D16D7316100EF6380 /* Default@2x.png */,
+				7FB6660F16D7316100EF6380 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7FA133A016D7309E008204B7 /* ISBackGesture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FA133AF16D7309E008204B7 /* Build configuration list for PBXNativeTarget "ISBackGesture" */;
+			buildPhases = (
+				7FA1339D16D7309E008204B7 /* Sources */,
+				7FA1339E16D7309E008204B7 /* Frameworks */,
+				7FA1339F16D7309E008204B7 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ISBackGesture;
+			productName = ISBackGesture;
+			productReference = 7FA133A116D7309E008204B7 /* libISBackGesture.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7FB665FA16D7316100EF6380 /* DemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FB6661116D7316100EF6380 /* Build configuration list for PBXNativeTarget "DemoApp" */;
+			buildPhases = (
+				7FB665F716D7316100EF6380 /* Sources */,
+				7FB665F816D7316100EF6380 /* Frameworks */,
+				7FB665F916D7316100EF6380 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7FB6661516D7316600EF6380 /* PBXTargetDependency */,
+			);
+			name = DemoApp;
+			productName = DemoApp;
+			productReference = 7FB665FB16D7316100EF6380 /* DemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7FA1339916D7309E008204B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Yosuke Ishikawa";
+			};
+			buildConfigurationList = 7FA1339C16D7309E008204B7 /* Build configuration list for PBXProject "ISBackGesture" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7FA1339816D7309E008204B7;
+			productRefGroup = 7FA133A216D7309E008204B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7FA133A016D7309E008204B7 /* ISBackGesture */,
+				7FB665FA16D7316100EF6380 /* DemoApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7FB665F916D7316100EF6380 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FB6660416D7316100EF6380 /* InfoPlist.strings in Resources */,
+				7FB6660C16D7316100EF6380 /* Default.png in Resources */,
+				7FB6660E16D7316100EF6380 /* Default@2x.png in Resources */,
+				7FB6661016D7316100EF6380 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7FA1339D16D7309E008204B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FB6662016D731D500EF6380 /* UIViewController+BackGesture.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FB665F716D7316100EF6380 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FB6660616D7316100EF6380 /* main.m in Sources */,
+				7FB6660A16D7316100EF6380 /* ISAppDelegate.m in Sources */,
+				7FB6661A16D731C200EF6380 /* ISDemoViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7FB6661516D7316600EF6380 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7FA133A016D7309E008204B7 /* ISBackGesture */;
+			targetProxy = 7FB6661416D7316600EF6380 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7FB6660216D7316100EF6380 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7FB6660316D7316100EF6380 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7FA133AD16D7309E008204B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7FA133AE16D7309E008204B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7FA133B016D7309E008204B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/ISBackGesture.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7FA133B116D7309E008204B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/ISBackGesture.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7FB6661216D7316100EF6380 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DemoApp/DemoApp-Prefix.pch";
+				INFOPLIST_FILE = "DemoApp/DemoApp-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7FB6661316D7316100EF6380 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DemoApp/DemoApp-Prefix.pch";
+				INFOPLIST_FILE = "DemoApp/DemoApp-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7FA1339C16D7309E008204B7 /* Build configuration list for PBXProject "ISBackGesture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FA133AD16D7309E008204B7 /* Debug */,
+				7FA133AE16D7309E008204B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FA133AF16D7309E008204B7 /* Build configuration list for PBXNativeTarget "ISBackGesture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FA133B016D7309E008204B7 /* Debug */,
+				7FA133B116D7309E008204B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FB6661116D7316100EF6380 /* Build configuration list for PBXNativeTarget "DemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FB6661216D7316100EF6380 /* Debug */,
+				7FB6661316D7316100EF6380 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7FA1339916D7309E008204B7 /* Project object */;
+}
