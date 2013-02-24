@@ -9,15 +9,9 @@
     self = [super init];
     if (self) {
         self.backGestureEnabled = YES;
-        
-        [self addObserver:self forKeyPath:@"backProgress" options:0 context:NULL];
+        self.navigationItem.title = @"ISBackGesture";
     }
     return self;
-}
-
-- (void)dealloc
-{
-    [self removeObserver:self forKeyPath:@"backProgress"];
 }
 
 - (void)loadView
@@ -32,26 +26,6 @@
      forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:button];
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-    if (object == self && [keyPath isEqualToString:@"backProgress"]) {
-        NSString *title = [NSString stringWithFormat:@"%.2f", self.backProgress];
-        
-        NSInteger index = [self.navigationController.viewControllers count] - 2;
-        if (index >= 0) {
-            UIViewController *viewController = [self.navigationController.viewControllers objectAtIndex:index];
-            
-            viewController.navigationItem.backBarButtonItem =
-            [[UIBarButtonItem alloc] initWithTitle:title
-                                             style:UIBarButtonItemStyleBordered
-                                            target:nil
-                                            action:nil];
-        }
-    } else {
-        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
-    }
 }
 
 - (void)push

@@ -1,21 +1,11 @@
 #import "UIViewController+BackGesture.h"
+#import "ISNavigationItemProgressButtonView.h"
+#import "ISUtility.h"
 #import <objc/runtime.h>
 
 static const char *ISBackGestureEnabledKey    = "ISBackGestureEnabledKey";
 static const char *ISBackGestureProgressKey   = "ISBackGestureProgressKey";
 static const char *ISBackGestureRecognizerKey = "ISBackGestureRecognizerKey";
-
-static void ISSwizzleInstanceMethod(Class c, SEL original, SEL alternative)
-{
-    Method orgMethod = class_getInstanceMethod(c, original);
-    Method altMethod = class_getInstanceMethod(c, alternative);
-    
-    if(class_addMethod(c, original, method_getImplementation(altMethod), method_getTypeEncoding(altMethod))) {
-        class_replaceMethod(c, alternative, method_getImplementation(orgMethod), method_getTypeEncoding(orgMethod));
-    } else {
-        method_exchangeImplementations(orgMethod, altMethod);
-    }
-}
 
 @interface UIViewController ()
 
@@ -115,10 +105,24 @@ static void ISSwizzleInstanceMethod(Class c, SEL original, SEL alternative)
     }
     
     CGPoint translation = [self.backGestureRecognizer translationInView:self.backGestureRecognizer.view];
-    if (self.backGestureRecognizer.state == UIGestureRecognizerStateEnded) {
-        self.backProgress = 0.f;
-        return;
+
+    for (UIView *subview in [self.navigationController.navigationBar subviews]) {
+        if ([subview isKindOfClass:[ISNavigationItemProgressButtonView class]]) {
+            ISNavigationItemProgressButtonView *progressButtonView = (id)subview;
+            if (gestureRecognizer.state == UIGestureRecognizerStateChanged) {
+                progressButtonView.progress = self.backProgress;
+            }
+            if (self.backGestureRecognizer.state == UIGestureRecognizerStateEnded) {
+                self.backProgress = 0.f;
+                [UIView animateWithDuration:.3
+                                 animations:^{
+                                     progressButtonView.progress = 0.f;
+                                 }];
+                return;
+            }
+        }
     }
+
     
     CGFloat progress = translation.x / 150.f;
     if (progress < 0.f) {
