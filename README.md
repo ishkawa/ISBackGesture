@@ -49,6 +49,7 @@ copy files under `Products/`
 
 - `libISBackGesture.a`
 - `ISBackGesture` (Header files)
+- `ISBackGesture.bundle`
 
 #### Link to QuartzCore.framework
 
