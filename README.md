@@ -50,10 +50,13 @@ copy files under `Products/`
 - `libISBackGesture.a`
 - `ISBackGesture` (Header files)
 
+#### Link to QuartzCore.framework
+
+open .xcodeproj -> "Build Phases" and add QuartzCore.framework in "Link Binary with Libraries".
 
 #### Add Linker Flag
 
-open .xcodeproj -> Build Settings and add `-ObjC` option into "Other Linker Flags".  
+open .xcodeproj -> "Build Settings" and add `-ObjC` option into "Other Linker Flags".  
 this config is required to load categories in a static library.
 
 #### Add Header Search Path

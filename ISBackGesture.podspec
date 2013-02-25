@@ -1,11 +1,12 @@
 Pod::Spec.new do |s|
-  s.name         = "ISBackGesture"
+  s.name         = "ISBackGestureExtended"
   s.version      = "0.0.1"
   s.summary      = "equips UIViewController with recognizing swipe to back."
   s.homepage     = "https://github.com/ishkawa/ISBackGesture"
   s.author       = { "Yosuke Ishikawa" => "ishkawa73@gmail.com" }
-  s.source       = { :git => "https://github.com/ishkawa/ISBackGesture.git", :tag => "0.0.1" }
-  s.platform     = :ios, '4.0'
+  s.source       = { :git => "https://github.com/ishkawa/ISBackGesture.git", :tag => "extended-0.0.1" }
+  s.platform     = :ios, '5.0'
+  s.frameworks   = "QuartzCore"
   s.source_files = 'Classes', 'ISBackGesture/**/*.{h,m}'
   s.license      = {
     :type => 'MIT',
