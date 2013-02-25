@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "ISBackGestureExtended"
+  s.name         = "ISBackGesture"
   s.version      = "0.0.1"
   s.summary      = "equips UIViewController with recognizing swipe to back."
   s.homepage     = "https://github.com/ishkawa/ISBackGesture"
