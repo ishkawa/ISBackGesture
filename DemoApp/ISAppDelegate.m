@@ -8,6 +8,7 @@
     ISDemoViewController *viewController = [[ISDemoViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] init];
     navigationController.viewControllers = @[viewController];
+    navigationController.navigationBar.progressTintColor = [UIColor blackColor];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];

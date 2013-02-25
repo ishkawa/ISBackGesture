@@ -1,4 +1,5 @@
 #import "ISNavigationItemProgressButtonView.h"
+#import "UINavigationBar+ProgressTintColor.h"
 #import <QuartzCore/QuartzCore.h>
 #import <objc/runtime.h>
 
@@ -80,11 +81,12 @@ static const char *ISLabelKey = "label";
     maskFrame.origin.x = self.frame.size.width;
     maskFrame.origin.y = 0.f;
     
+    UIColor *progressTintColor = [(UINavigationBar *)self.superview progressTintColor];
     UIView *progressView = [[UIView alloc] initWithFrame:maskFrame];
     progressView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     progressView.backgroundColor = [UIColor blackColor];
     progressView.alpha = 0.f;
-    progressView.backgroundColor = [UIColor blueColor];
+    progressView.backgroundColor = progressTintColor ? progressTintColor : [UIColor blueColor];
     [containerView addSubview:progressView];
     
     UILabel *label = [[UILabel alloc] init];

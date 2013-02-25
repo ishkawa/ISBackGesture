@@ -1,5 +1,4 @@
 #import "ISDemoViewController.h"
-#import "UIViewController+BackGesture.h"
 #import <objc/runtime.h>
 
 @implementation ISDemoViewController

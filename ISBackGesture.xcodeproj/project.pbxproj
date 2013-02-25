@@ -26,6 +26,7 @@
 		7FB6661716D7317100EF6380 /* libISBackGesture.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA133A116D7309E008204B7 /* libISBackGesture.a */; };
 		7FB6661A16D731C200EF6380 /* ISDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6661916D731C200EF6380 /* ISDemoViewController.m */; };
 		7FB6662016D731D500EF6380 /* UIViewController+BackGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6661E16D731D500EF6380 /* UIViewController+BackGesture.m */; };
+		7FF8997616DB41F500A9A3E4 /* UINavigationBar+ProgressTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF8997516DB41F500A9A3E4 /* UINavigationBar+ProgressTintColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		7FB6661916D731C200EF6380 /* ISDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISDemoViewController.m; sourceTree = "<group>"; };
 		7FB6661D16D731D500EF6380 /* UIViewController+BackGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackGesture.h"; sourceTree = "<group>"; };
 		7FB6661E16D731D500EF6380 /* UIViewController+BackGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackGesture.m"; sourceTree = "<group>"; };
+		7FF8997416DB41F500A9A3E4 /* UINavigationBar+ProgressTintColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+ProgressTintColor.h"; sourceTree = "<group>"; };
+		7FF8997516DB41F500A9A3E4 /* UINavigationBar+ProgressTintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+ProgressTintColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,8 @@
 				7FA133A916D7309E008204B7 /* ISBackGesture.h */,
 				7FB6661D16D731D500EF6380 /* UIViewController+BackGesture.h */,
 				7FB6661E16D731D500EF6380 /* UIViewController+BackGesture.m */,
+				7FF8997416DB41F500A9A3E4 /* UINavigationBar+ProgressTintColor.h */,
+				7FF8997516DB41F500A9A3E4 /* UINavigationBar+ProgressTintColor.m */,
 				7F26AB5B16DA6AEB001397A3 /* ISNavigationItemProgressButtonView.h */,
 				7F26AB5C16DA6AEB001397A3 /* ISNavigationItemProgressButtonView.m */,
 				7F26AB5D16DA6AEB001397A3 /* ISUtility.h */,
@@ -267,6 +272,7 @@
 				7F26AB6116DA6AEB001397A3 /* ISNavigationItemProgressButtonView.m in Sources */,
 				7F26AB6216DA6AEB001397A3 /* ISUtility.m in Sources */,
 				7F26AB6316DA6AEB001397A3 /* UIView+SwizzleIsa.m in Sources */,
+				7FF8997616DB41F500A9A3E4 /* UINavigationBar+ProgressTintColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +391,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DemoApp/DemoApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = $SRCROOT;
 				INFOPLIST_FILE = "DemoApp/DemoApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
@@ -399,6 +406,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DemoApp/DemoApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = $SRCROOT;
 				INFOPLIST_FILE = "DemoApp/DemoApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
