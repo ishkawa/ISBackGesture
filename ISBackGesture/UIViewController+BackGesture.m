@@ -75,12 +75,14 @@ static void ISSwizzleInstanceMethod(Class c, SEL original, SEL alternative)
 
 - (void)_viewDidLoad
 {
+    [self _viewDidLoad];
     [self startRecognizing];
 }
 
 - (void)_viewDidUnload
 {
     self.backGestureRecognizer = nil;
+    [self _viewDidUnload];
 }
 
 #pragma mark -
