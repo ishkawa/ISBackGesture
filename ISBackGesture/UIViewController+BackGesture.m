@@ -17,7 +17,7 @@ static void ISSwizzleInstanceMethod(Class c, SEL original, SEL alternative)
     }
 }
 
-@interface UIViewController ()
+@interface UIViewController () <UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) UIPanGestureRecognizer *backGestureRecognizer;
 
@@ -97,6 +97,7 @@ static void ISSwizzleInstanceMethod(Class c, SEL original, SEL alternative)
     }
     
     self.backGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
+    self.backGestureRecognizer.delegate = self;
     [self.view addGestureRecognizer:self.backGestureRecognizer];
 }
 
@@ -134,6 +135,19 @@ static void ISSwizzleInstanceMethod(Class c, SEL original, SEL alternative)
     if (self.backProgress >= 1.f) {
         [self.navigationController popViewControllerAnimated:YES];
     }
+}
+
+#pragma mark - UIGestureRecognizerDelegate
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    UIPanGestureRecognizer *recognizer = (UIPanGestureRecognizer *)gestureRecognizer;
+    CGPoint point = [recognizer velocityInView:self.view];
+    if (ABS(point.x) < ABS(point.y)) {
+        return NO;
+    }
+    
+    return YES;
 }
 
 @end
