@@ -54,11 +54,15 @@ static void ISSwizzleInstanceMethod(Class c, SEL original, SEL alternative)
 
 - (void)setBackGestureEnabled:(BOOL)backGestureEnabled
 {
-    objc_setAssociatedObject(self, ISBackGestureEnabledKey, @(backGestureEnabled), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    
-    if (self.isViewLoaded && backGestureEnabled) {
-        [self startRecognizing];
+    if (self.isViewLoaded) {
+        if (backGestureEnabled) {
+            [self startRecognizing];
+        } else {
+            [self stopRecognizing];
+        }
     }
+    
+    objc_setAssociatedObject(self, ISBackGestureEnabledKey, @(backGestureEnabled), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIPanGestureRecognizer *)backGestureRecognizer
@@ -89,9 +93,10 @@ static void ISSwizzleInstanceMethod(Class c, SEL original, SEL alternative)
 
 - (void)startRecognizing
 {
-    if (!self.isViewLoaded || !self.backGestureEnabled) {
+    if (!self.isViewLoaded || self.backGestureEnabled) {
         return;
     }
+    
     if (self.backGestureRecognizer) {
         [self.view removeGestureRecognizer:self.backGestureRecognizer];
     }
@@ -103,7 +108,7 @@ static void ISSwizzleInstanceMethod(Class c, SEL original, SEL alternative)
 
 - (void)stopRecognizing
 {
-    if (!self.isViewLoaded || self.backGestureEnabled) {
+    if (!self.isViewLoaded || !self.backGestureEnabled) {
         return;
     }
     
